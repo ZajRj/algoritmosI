@@ -10,7 +10,7 @@ int even_sum(int n)
     if(n == 0)
         return 0;
 
-    if (n != 0 && n % 2 == 0)
+    if (n != 0)
     {
         aux = n + even_sum(n-2);
     }
@@ -23,6 +23,11 @@ int main()
     int a;
     printf("Ingrese un numero: ");
     scanf("%d", &a);
-
-    printf("La suma de los pares del numero %d hasta 2 es %d", a, even_sum(a));
+    
+    if(a%2 == 0)
+    {
+        printf("La suma de los pares del numero %d hasta 2 es %d", a, even_sum(a));
+    }else{
+        printf("El numero debe ser par");
+    }
 }
