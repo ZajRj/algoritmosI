@@ -2,6 +2,8 @@
 retorne la posición de a en el arreglo. Si a no se encuentra en el arreglo, la función debe retornar el valor –1. */
 
 #include <stdio.h>
+#include <locale.h>
+#include <windows.h>
 
 int search(int arr[100],int element,int size)
 {
@@ -15,7 +17,9 @@ int search(int arr[100],int element,int size)
 
 int main()
 {
-    int arr[100] = {10,24,44,76};
+    SetConsoleCP(850);
+    SetConsoleOutputCP(850);
+    int arr[100] = {10,24,45,76};
 
     int element = 45;
 
@@ -25,6 +29,6 @@ int main()
     {
         printf("El elemento %d no se encuentra en el arreglo proporcionado.",element);
     }else{
-         printf("El elemento %d se encuentra en el indice %d del arreglo proporcionado.",element,aux);
+         printf("El elemento %d se encuentra en el  índice %d del arreglo proporcionado.",element,aux);
     }
 }
